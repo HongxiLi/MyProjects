@@ -1,0 +1,1 @@
+ INSERT INTO c_user(username,password,type) VALUES('student','23261fedd0be3b50006c8c8eeff1505e',1);

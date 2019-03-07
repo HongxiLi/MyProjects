@@ -1,0 +1,495 @@
+[ 2016-10-07T11:03:23+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-07T11:03:23+08:00 ] 127.0.0.1 /admin.php/User/Login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T11:05:01+08:00 ] 127.0.0.1 /admin.php/User/DoLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_user` [ RunTime:0.0550s ]
+SQL: SELECT * FROM `c_user` WHERE `username` = 'stu' AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_user` WHERE `type` = 3 AND `status` = 1  [ RunTime:0.0010s ]
+
+[ 2016-10-07T11:05:01+08:00 ] 127.0.0.1 /admin.php/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_log` [ RunTime:0.0370s ]
+SQL: INSERT INTO `c_log` (`event_name`,`c`,`m`,`created`,`uid`) VALUES ('IndexController->Index()','Index','Index','1475809501','2') [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `c_config` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `c_config` WHERE ( id=1 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T11:05:02+08:00 ] 127.0.0.1 /admin.php/Json/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `c_log` (`event_name`,`c`,`m`,`created`,`uid`) VALUES ('JsonController->Index()','Json','Index','1475809502','2') [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `c_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_config` WHERE ( id=1 )  [ RunTime:0.0010s ]
+ERR: 非法操作:Index
+
+[ 2016-10-07T11:05:03+08:00 ] 127.0.0.1 /admin.php/CourseControl/Collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `c_log` (`event_name`,`c`,`m`,`created`,`uid`) VALUES ('CourseControlController->Collection()','CourseControl','Collection','1475809503','2') [ RunTime:0.0540s ]
+SQL: SHOW COLUMNS FROM `c_config` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_config` WHERE ( id=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `c_course` [ RunTime:0.0290s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `c_course` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_course` WHERE `status` = 1 ORDER BY created LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `c_category` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `c_category` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `c_user` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_user` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `c_year` [ RunTime:0.0320s ]
+SQL: SELECT * FROM `c_year` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `c_semester` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `c_semester` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `c_week` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `c_week` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `c_time` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `c_time` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `c_room` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_room` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `c_selection` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `c_selection` WHERE `course_id` = 1 AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_category` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_user` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_year` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_semester` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_week` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_time` WHERE `id` = 2  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_room` WHERE `id` = 4  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_selection` WHERE `course_id` = 2 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_category` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_user` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_year` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_semester` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_week` WHERE `id` = 2  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_time` WHERE `id` = 2  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_room` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_selection` WHERE `course_id` = 3 AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_category` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_user` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_year` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_semester` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_week` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_time` WHERE `id` = 4  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_room` WHERE `id` = 4  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_selection` WHERE `course_id` = 4 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_category` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_user` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_year` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_semester` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_week` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_time` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_room` WHERE `id` = 2  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_selection` WHERE `course_id` = 5 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_category` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_user` WHERE `status` = 1 AND `type` = 2  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_year` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_semester` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_week` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_time` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_room` WHERE `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T11:06:19+08:00 ] 127.0.0.1 /admin.php/CourseControl/MyScore
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `c_log` (`event_name`,`c`,`m`,`created`,`uid`) VALUES ('CourseControlController->MyScore()','CourseControl','MyScore','1475809579','2') [ RunTime:0.0570s ]
+SQL: SHOW COLUMNS FROM `c_config` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `c_config` WHERE ( id=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `c_selection` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_selection` WHERE `status` = 1 AND `step` = 2 AND `student_id` = 2 GROUP BY gp  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_selection` WHERE `status` = 1 AND `step` = 2 AND `student_id` = 2 AND `gp` = 3  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `c_course` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_course` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `c_score` [ RunTime:0.0270s ]
+SQL: SELECT * FROM `c_score` WHERE `courseid` = 3 AND `userid` = 2  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `c_category` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_category` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `c_user` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_user` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `c_year` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_year` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `c_semester` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_semester` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `c_week` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_week` WHERE `id` = 2  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `c_time` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_time` WHERE `id` = 2  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `c_room` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: room_field D:\wamp\www\stscore\Application\Dashboard\Controller\CourseControlController.class.php 第 322 行.
+SQL: SELECT * FROM `c_room` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_selection` WHERE `course_id` = 3 AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_course` WHERE `id` = 5  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_score` WHERE `courseid` = 5 AND `userid` = 2  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\stscore\Application\Dashboard\Controller\CourseControlController.class.php 第 287 行.
+SQL: SELECT * FROM `c_category` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_user` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_year` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_semester` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_week` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_time` WHERE `id` = 3  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: room_field D:\wamp\www\stscore\Application\Dashboard\Controller\CourseControlController.class.php 第 322 行.
+SQL: SELECT * FROM `c_room` WHERE `id` = 2  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_selection` WHERE `course_id` = 5 AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_course` WHERE `id` = 4  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_score` WHERE `courseid` = 4 AND `userid` = 2  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\stscore\Application\Dashboard\Controller\CourseControlController.class.php 第 287 行.
+SQL: SELECT * FROM `c_category` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_user` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_year` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_semester` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_week` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_time` WHERE `id` = 4  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: room_field D:\wamp\www\stscore\Application\Dashboard\Controller\CourseControlController.class.php 第 322 行.
+SQL: SELECT * FROM `c_room` WHERE `id` = 4  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_selection` WHERE `course_id` = 4 AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_semester` WHERE `id` = 3  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: room_field D:\wamp\www\stscore\Application\Runtime\Cache\Dashboard\b8ebecf132de79563e0335dffb453ab0.php 第 129 行.
+NOTIC: [8] Undefined index: room_field D:\wamp\www\stscore\Application\Runtime\Cache\Dashboard\b8ebecf132de79563e0335dffb453ab0.php 第 129 行.
+NOTIC: [8] Undefined index: room_field D:\wamp\www\stscore\Application\Runtime\Cache\Dashboard\b8ebecf132de79563e0335dffb453ab0.php 第 129 行.
+NOTIC: [8] Undefined variable: page D:\wamp\www\stscore\Application\Runtime\Cache\Dashboard\b8ebecf132de79563e0335dffb453ab0.php 第 141 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T11:08:17+08:00 ] 127.0.0.1 /admin.php/User/Quit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T11:08:17+08:00 ] 127.0.0.1 /admin.php/User/Login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T11:08:20+08:00 ] 127.0.0.1 /admin.php/User/DoLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `c_user` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_user` WHERE `username` = 'admin' AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_user` WHERE `type` = 3 AND `status` = 1  [ RunTime:0.0000s ]
+
+[ 2016-10-07T11:08:20+08:00 ] 127.0.0.1 /admin.php/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `c_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `c_log` (`event_name`,`c`,`m`,`created`,`uid`) VALUES ('IndexController->Index()','Index','Index','1475809700','1') [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `c_config` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_config` WHERE ( id=1 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T11:08:21+08:00 ] 127.0.0.1 /admin.php/Json/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_log` [ RunTime:0.0020s ]
+SQL: INSERT INTO `c_log` (`event_name`,`c`,`m`,`created`,`uid`) VALUES ('JsonController->Index()','Json','Index','1475809701','1') [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `c_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_config` WHERE ( id=1 )  [ RunTime:0.0000s ]
+ERR: 非法操作:Index
+
+[ 2016-10-07T11:08:26+08:00 ] 127.0.0.1 /admin.php/Student/Collection/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_log` [ RunTime:0.0040s ]
+SQL: INSERT INTO `c_log` (`event_name`,`c`,`m`,`created`,`uid`) VALUES ('StudentController->Collection()','Student','Collection','1475809706','1') [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `c_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_config` WHERE ( id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `c_user` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `c_user` WHERE `status` = 1 AND `type` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_user` WHERE `status` = 1 AND `type` = 1 ORDER BY created LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `c_year` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_year` WHERE `id` = 2  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_year` WHERE `id` = null  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\stscore\Application\Dashboard\Controller\StudentController.class.php 第 259 行.
+SQL: SELECT * FROM `c_year` WHERE `id` = null  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\stscore\Application\Dashboard\Controller\StudentController.class.php 第 259 行.
+SQL: SELECT * FROM `c_year` WHERE `id` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T11:08:53+08:00 ] 127.0.0.1 /admin.php/User/Quit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T11:08:53+08:00 ] 127.0.0.1 /admin.php/User/Login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T11:08:55+08:00 ] 127.0.0.1 /admin.php/User/DoLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `c_user` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_user` WHERE `username` = 'tea1' AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_user` WHERE `type` = 3 AND `status` = 1  [ RunTime:0.0000s ]
+
+[ 2016-10-07T11:08:55+08:00 ] 127.0.0.1 /admin.php/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `c_log` (`event_name`,`c`,`m`,`created`,`uid`) VALUES ('IndexController->Index()','Index','Index','1475809735','3') [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `c_config` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_config` WHERE ( id=1 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T11:08:55+08:00 ] 127.0.0.1 /admin.php/Json/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_log` [ RunTime:0.0040s ]
+SQL: INSERT INTO `c_log` (`event_name`,`c`,`m`,`created`,`uid`) VALUES ('JsonController->Index()','Json','Index','1475809735','3') [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `c_config` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_config` WHERE ( id=1 )  [ RunTime:0.0000s ]
+ERR: 非法操作:Index
+
+[ 2016-10-07T11:09:04+08:00 ] 127.0.0.1 /admin.php/Course/Collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `c_log` (`event_name`,`c`,`m`,`created`,`uid`) VALUES ('CourseController->Collection()','Course','Collection','1475809744','3') [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `c_config` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_config` WHERE ( id=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `c_course` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `c_course` WHERE `status` = 1 AND `teacher_id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_course` WHERE `status` = 1 AND `teacher_id` = 3 ORDER BY created LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `c_category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_category` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `c_user` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_user` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `c_year` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_year` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `c_semester` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_semester` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `c_week` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_week` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `c_time` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_time` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `c_room` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_room` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `c_selection` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_selection` WHERE `course_id` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_category` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_user` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_year` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_semester` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_week` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_time` WHERE `id` = 2  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_room` WHERE `id` = 4  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_selection` WHERE `course_id` = 2 AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_category` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_user` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_year` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_semester` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_week` WHERE `id` = 2  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_time` WHERE `id` = 2  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_room` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_selection` WHERE `course_id` = 3 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_category` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_user` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_year` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_semester` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_week` WHERE `id` = 3  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_time` WHERE `id` = 4  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_room` WHERE `id` = 4  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_selection` WHERE `course_id` = 4 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_category` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `c_user` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_year` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_semester` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_week` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_time` WHERE `id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_room` WHERE `id` = 2  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `c_selection` WHERE `course_id` = 5 AND `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
